@@ -11,12 +11,7 @@
 
 ## 二、创建vue工程
 cmd命令`vue create project-name`创建vue工程，创建成功如下：
-![微信截图_20181008221144.png-53.2kB][1]
-使用IDE（我习惯使用webstorm）打开工程，结构如下：
 
-![微信截图_20181008221837.png-89.4kB][2]
-自动生成的README.md中为我们给出了常用的命令。执行`npm run serve`使工程以开发模式运行，编译完成后可正常访问http://localhost:8080说明成功。
-> 这里会涉及一些vue的基础，我们在这篇博文中不做详细说明，不太了解的小哥哥小姐姐可以查阅vue相关教程（ps：vue的文档还是相当全面和详细的）。
 
 ## 三、多页面配置
 > 使用vue脚手架创建的vue项目均为单页面应用（单页面应用有着多页面不具备的多种优势），但在有些场景下（如一套系统的管理端和客户端应分为不同的页面应用）我们需要构建多页面应用。使用旧版vue-cli构建的工程实现起来需要修改许多配置，相当繁琐，基于Vue CLI配置可以轻松实现多页面应用构建。
@@ -54,8 +49,7 @@ module.exports = {
 
 首先，安装两个插件，vue-router和vue-wechat-title。vue-router不解释了，vue-wechat-title为单页面应用修改标题的插件，[详细说明点击传送门](https://www.npmjs.com/package/vue-wechat-title)。
 其次为创建模块，在src下创建目录modules，在modules下创建两个模块console和client；在public下添加模版console.html和clien.html。完成后工程结构如下：
-
-![微信截图_20181009103056.png-54.2kB][3]
+![image.png](https://upload-images.jianshu.io/upload_images/3369258-df5d534a45410c6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 3、应用路由配置
 
@@ -67,7 +61,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '/', name: 'login', component: r => { require(['./login/Login'], r) }, meta: { title: 'console 登录' }}
+    { path: '/', name: 'login', component: r => { require(['./page/login/login'], r) }, meta: { title: 'console 登录' }}
 ]
 
 export default new VueRouter({
@@ -120,8 +114,4 @@ new Vue({
 > Vue CLI初始化的README.md内容为常用指令（上文有截图说明），这里被我用来做说明文档了，在此说明下以免误会。
 文章内容为个人工作学习总结，难免有纰漏，欢迎指摘、讨论。
 
-  [1]: http://static.zybuluo.com/louie-001/qlph33jyj30mldmynd4f6ive/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20181008221144.png
-  [2]: http://static.zybuluo.com/louie-001/mqwnnz344t5z3bzsv6tuae4t/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20181008221837.png
-  [3]: http://static.zybuluo.com/louie-001/dvr0506t5882rl3jk2e7n0uy/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20181009103056.png
-  [4]: http://static.zybuluo.com/louie-001/6a28jsgq4njodvvzzmgnpfy2/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20181009110715.png
-  [5]: http://static.zybuluo.com/louie-001/s6pk8gdr4n99qwefdube4jpn/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20181009111008.png
+ 
