@@ -3,12 +3,19 @@
     <div>
         <div>我是console首页</div>
         <div class="name">{{$store.state.name}}</div>
+        <el-input size="small" v-model="input" placeholder="请输入内容"></el-input>
+
     </div>
 </template>
 
 <script>
     export default {
-        name: "login"
+        name: "login",
+        data(){
+            return {
+                input:''
+            }
+        }
     }
 </script>
 

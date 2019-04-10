@@ -11,6 +11,6 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="less" rel="stylesheet/less">
+@import "../../assets/base.less";
 </style>
