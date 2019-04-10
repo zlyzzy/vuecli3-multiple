@@ -49,6 +49,8 @@ module.exports = {
 
 首先，安装两个插件，vue-router和vue-wechat-title。vue-router不解释了，vue-wechat-title为单页面应用修改标题的插件，[详细说明点击传送门](https://www.npmjs.com/package/vue-wechat-title)。
 其次为创建模块，在src下创建目录modules，在modules下创建两个模块console和client；在public下添加模版console.html和clien.html。完成后工程结构如下：
+
+
 ![image.png](https://upload-images.jianshu.io/upload_images/3369258-df5d534a45410c6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 3、应用路由配置
@@ -105,10 +107,14 @@ new Vue({
 至此，针对console模块的配置完成，对client模块做相同配置即可。
 ## 四、运行测试
 执行`npm run serve`指令以开发模式运行工程，访问http://localhost:8080/console.html可以看到进入了我们在路由里为console应用设置的首页面，title也与我们设置的相同：
-![微信截图_20181009110715.png-19.7kB][4]
+
+![image.png](https://upload-images.jianshu.io/upload_images/3369258-9f9085ae5fa08693.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 访问http://localhost:8080/client.html进入了我们为client应用设置的首页面：
-![微信截图_20181009111008.png-23.3kB][5]
+
+![image.png](https://upload-images.jianshu.io/upload_images/3369258-c35dbe1f9f5f2836.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 
 ### 补充说明：
 > Vue CLI初始化的README.md内容为常用指令（上文有截图说明），这里被我用来做说明文档了，在此说明下以免误会。
