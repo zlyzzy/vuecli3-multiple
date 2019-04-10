@@ -34,7 +34,7 @@ module.exports = {
             title: 'console page',
 
             // 包含的模块，可选项
-            chunks: ['console']
+            chunks: ['chunk-vendors','console']
         },
         // 只有entry属性时，直接用字符串表示模块入口
         client: 'src/modules/client/client.js'

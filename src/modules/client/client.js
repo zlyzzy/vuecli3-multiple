@@ -8,7 +8,7 @@ import "babel-polyfill";
 
 
 Vue.use(require('vue-wechat-title'))
-Vue.use(ElementUI);
+Vue.use(ElementUI,{size: 'small'});
 
 new Vue({
     router,

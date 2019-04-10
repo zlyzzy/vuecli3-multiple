@@ -4,6 +4,7 @@
 ---
 ### 简要说明
 > Vue CLI是一个基于Vue.js进行快速开发的完整系统，是vue-cli的升级版，除含有快速搭建Vue项目的脚手架外还有许多实用功能，vue ui是个亮点，[官方详细文档传送门](https://cli.vuejs.org/zh/guide)。
+[多页面配置文档](https://cli.vuejs.org/zh/config/#pages)
 
 ## 一、安装Vue CLI
 安装Vue CLI命令为`npm install -g vue@cli`,若已安装旧版vue-cli则需要先卸载vue-cli，卸载命令为`npm uninstall vue-cli -g` 。
@@ -41,7 +42,7 @@ module.exports = {
             title: 'console page',
 
             // 包含的模块，可选项
-            chunks: ['console']
+            chunks: ['chunk-vendors','console']
         },
         // 只有entry属性时，直接用字符串表示模块入口
         client: 'src/modules/client/client.js'
